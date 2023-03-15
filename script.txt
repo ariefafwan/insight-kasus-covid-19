@@ -1,4 +1,4 @@
-Soal No 1.
+Pertanyaan No 1.
     Jumlah total kasus Covid-19 aktif yang baru di setiap provinsi lalu 
     diurutkan berdasarkan jumlah kasus yang paling besar
 
@@ -7,7 +7,7 @@ Soal No 1.
     Query           :
     Link Dashboard  :
 
-Soal No 2.
+Pertanyaan No 2.
     Mengambil 2 (dua) location iso code yang memiliki jumlah total
     kematian karena Covid-19 paling sedikit
 
@@ -16,7 +16,7 @@ Soal No 2.
     Query           :
     Link Dashboard  :
 
-Soal No 3.
+Pertanyaan No 3.
     Data tentang tanggal-tanggal ketika rate kasus recovered di
     Indonesia paling tinggi beserta jumlah ratenya
 
@@ -25,7 +25,7 @@ Soal No 3.
     Query           :
     Link Dashboard  :
 
-Soal No 4.
+Pertanyaan No 4.
     Total case fatality rate dan case recovered rate dari masing-masing
     location iso code yang diurutkan dari data yang paling rendah
 
@@ -34,7 +34,7 @@ Soal No 4.
     Query           :
     Link Dashboard  :
 
-Soal No 5.
+Pertanyaan No 5.
     Data tentang tanggal-tanggal saat total kasus Covid-19 mulai
     menyentuh angka 30.000-an
 
@@ -44,7 +44,7 @@ Soal No 5.
     Link Dashboard  :
 
 
-Soal No 6.
+Pertanyaan No 6.
     Jumlah data yang tercatat ketika kasus Covid-19 lebih dari atau
     sama dengan 30.000
 
