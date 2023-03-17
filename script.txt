@@ -1,6 +1,12 @@
 Anggota Kelompok    =   Teuku M. Arief Afwan
                         Sylla Ayu Kusumatahi
 
+Link Dashboard
+    :   https://lookerstudio.google.com/reporting/95517484-55d0-4540-8880-8a9667ae6777
+
+Link Github
+    :   https://github.com/ariefafwan/insight-kasus-covid-19
+
 Pertanyaan No 1.
     Jumlah total kasus Covid-19 aktif yang baru di setiap provinsi lalu 
     diurutkan berdasarkan jumlah kasus yang paling besar
