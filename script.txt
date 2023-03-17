@@ -1,81 +1,101 @@
+Anggota Kelompok    =   Teuku M. Arief Afwan
+                        Sylla Ayu Kusumatahi
+
 Pertanyaan No 1.
     Jumlah total kasus Covid-19 aktif yang baru di setiap provinsi lalu 
     diurutkan berdasarkan jumlah kasus yang paling besar
 
-    Jawaban         :
+    Jawaban         :   Province,Total_Kasus_Aktif
+                        Jawa Barat,13496
+                        DKI Jakarta,10922
+                        Banten,2558
+                        Jawa Tengah,1423
+                        Jawa Timur,1136
+                        dll
     
     Query           :   SELECT Province, SUM(Total_Active_Cases) AS Total_Kasus_Aktif
                         FROM `challenge-380711.covidcase_19.covidindonesia`
+                        WHERE Province IS NOT NULL
                         GROUP BY Province
                         ORDER BY Total_Kasus_Aktif DESC;
-    Link Dashboard  :
 
 Pertanyaan No 2.
     Mengambil 2 (dua) location iso code yang memiliki jumlah total
     kematian karena Covid-19 paling sedikit
 
-    Jawaban         :
+    Jawaban         :   Location_ISO_Code,Total_Deaths
+                        ID-MA,147196
+                        ID-MU,167511
     
     Query           :   SELECT Location_ISO_Code, SUM(Total_Deaths) AS Total_Deaths
                         FROM `challenge-380711.covidcase_19.covidindonesia`
                         GROUP BY Location_ISO_Code
                         ORDER BY Total_Deaths ASC 
                         LIMIT 2;
-    Link Dashboard  :
 
 Pertanyaan No 3.
     Data tentang tanggal-tanggal ketika rate kasus recovered di
     Indonesia paling tinggi beserta jumlah ratenya
 
-    Jawaban         :
+    Jawaban         :   Date,recovery_rate
+                        2020-03-06,111.0
+                        2020-03-07,111.0
+                        2020-03-12,66.0
+                        2020-03-11,65.0
+                        2020-03-10,61.0
+                        2020-03-03,60.0
     
     Query           :   SELECT Date, MAX(Case_Recovered_Rate) AS recovery_rate
                         FROM `challenge-380711.covidcase_19.covidindonesia`
                         GROUP BY Date
                         ORDER BY recovery_rate DESC;
-    Link Dashboard  :
 
 Pertanyaan No 4.
     Total case fatality rate dan case recovered rate dari masing-masing
     location iso code yang diurutkan dari data yang paling rendah
 
-    Jawaban         :
+    Jawaban         :   Location_ISO_Code,kasus_fatal,kasus_recovery
+                        ID-KU,14.285000000000021,733.72659999999894
+                        ID-NT,15.934500000000002,700.82079999999894
+                        ID-PA,16.895300000000013,608.23260000000084
+                        ID-JA,17.326799999999977,760.52920000000131
+                        ID-SG,19.668699999999919,741.66440000000159
+                        ID-KB,20.560999999999932,771.57379999999887
     
-    Query           :
-                        select Location_ISO_Code,
+    Query           :   select Location_ISO_Code,
                             SUM(Case_Fatality_Rate) as kasus_fatal ,
                             SUM(Case_Recovered_Rate) as kasus_recovery
                         from `challenge1-datascience.dataset_covid_19.kasus_covid`
                             GROUP BY Location_ISO_Code
                             ORDER BY kasus_fatal, kasus_recovery
                             ASC;
-    
-    Link Dashboard  :
 
 Pertanyaan No 5.
     Data tentang tanggal-tanggal saat total kasus Covid-19 mulai
     menyentuh angka 30.000-an
 
-    Jawaban         :
+    Jawaban         :   Date,Total_Cases
+                        2020-06-06,30514
+                        2020-06-07,31186
+                        2020-06-08,32033
+                        2020-06-09,33075
+                        2020-06-10,34316
+                        2020-06-11,35295
     
-    Query           :
-                        select Date, Total_Cases, Location
+    Query           :   select Date, Total_Cases
                         from `challenge1-datascience.dataset_covid_19.kasus_covid`
                           WHERE Total_Cases >=30000
                           ORDER BY Date 
                           ASC;
-    
-    Link Dashboard  :
 
 Pertanyaan No 6.
     Jumlah data yang tercatat ketika kasus Covid-19 lebih dari atau
     sama dengan 30.000
 
-    Jawaban         :
+    Jawaban         :   jumlah_data
+                        14399
     
-    Query           :
-                        SELECT
+    Query           :   SELECT
                             COUNT(*) AS jumlah_data
                         FROM `dataset_covid_19.kasus_covid`
-                            WHERE Total_Cases >=30000
-    Link Dashboard  :   
+                            WHERE Total_Cases >=30000 
