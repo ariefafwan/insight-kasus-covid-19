@@ -4,7 +4,10 @@ Pertanyaan No 1.
 
     Jawaban         :
     
-    Query           :
+    Query           :   SELECT Province, SUM(Total_Active_Cases) AS Total_Kasus_Aktif
+                        FROM `challenge-380711.covidcase_19.covidindonesia`
+                        GROUP BY Province
+                        ORDER BY Total_Kasus_Aktif DESC;
     Link Dashboard  :
 
 Pertanyaan No 2.
@@ -13,7 +16,11 @@ Pertanyaan No 2.
 
     Jawaban         :
     
-    Query           :
+    Query           :   SELECT Location_ISO_Code, SUM(Total_Deaths) AS Total_Deaths
+                        FROM `challenge-380711.covidcase_19.covidindonesia`
+                        GROUP BY Location_ISO_Code
+                        ORDER BY Total_Deaths ASC 
+                        LIMIT 2;
     Link Dashboard  :
 
 Pertanyaan No 3.
@@ -22,7 +29,10 @@ Pertanyaan No 3.
 
     Jawaban         :
     
-    Query           :
+    Query           :   SELECT Date, MAX(Case_Recovered_Rate) AS recovery_rate
+                        FROM `challenge-380711.covidcase_19.covidindonesia`
+                        GROUP BY Date
+                        ORDER BY recovery_rate DESC;
     Link Dashboard  :
 
 Pertanyaan No 4.
